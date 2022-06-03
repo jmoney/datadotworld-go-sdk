@@ -1,4 +1,4 @@
-module datadotworld-go-sdk
+module github.com/Datadotworld/datadotworld-go-sdk
 
 go 1.18
 
