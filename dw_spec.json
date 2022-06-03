@@ -10653,8 +10653,7 @@
             "example" : "Humanitarian_Aid",
             "description" : "Connection name",
             "minLength" : 0,
-            "maxLength" : 1024,
-            "pattern" : "[\\w\\_\\.-]{0,}"
+            "maxLength" : 1024
           },
           "type" : {
             "type" : "string",
@@ -10679,8 +10678,7 @@
             "example" : "schemadw",
             "description" : "Database/Schema Logical Name",
             "minLength" : 0,
-            "maxLength" : 256,
-            "pattern" : "[\\w\\_]{0,}"
+            "maxLength" : 256
           },
           "credentials" : {
             "description" : "Database Credentials",
@@ -11538,8 +11536,7 @@
           "name" : {
             "type" : "string",
             "minLength" : 1,
-            "maxLength" : 128,
-            "pattern" : "^[^/]+$"
+            "maxLength" : 128
           },
           "source" : {
             "$ref" : "#/definitions/FileSourceCreateOrUpdateRequest"
@@ -11564,8 +11561,7 @@
           "name" : {
             "type" : "string",
             "minLength" : 1,
-            "maxLength" : 128,
-            "pattern" : "^[^/]+$"
+            "maxLength" : 128
           },
           "source" : {
             "$ref" : "#/definitions/FileSourceCreateRequest"
@@ -11590,8 +11586,7 @@
           "name" : {
             "type" : "string",
             "minLength" : 1,
-            "maxLength" : 128,
-            "pattern" : "^[^/]+$"
+            "maxLength" : 128
           },
           "description" : {
             "type" : "string",
@@ -11835,8 +11830,7 @@
           "name" : {
             "type" : "string",
             "minLength" : 1,
-            "maxLength" : 128,
-            "pattern" : "^[^/]+$"
+            "maxLength" : 128
           },
           "sizeInBytes" : {
             "type" : "integer",
@@ -14126,8 +14120,7 @@
           "value" : {
             "type" : "string",
             "minLength" : 2,
-            "maxLength" : 25,
-            "pattern" : "[a-zA-Z0-9\\s]*"
+            "maxLength" : 25
           }
         }
       },

@@ -38,7 +38,6 @@ type FileSummaryResponse struct {
 	// Required: true
 	// Max Length: 128
 	// Min Length: 1
-	// Pattern: ^[^/]+$
 	Name *string `json:"name"`
 
 	// size in bytes
@@ -121,10 +120,6 @@ func (m *FileSummaryResponse) validateName(formats strfmt.Registry) error {
 	}
 
 	if err := validate.MaxLength("name", "body", *m.Name, 128); err != nil {
-		return err
-	}
-
-	if err := validate.Pattern("name", "body", *m.Name, `^[^/]+$`); err != nil {
 		return err
 	}
 

@@ -19,7 +19,7 @@ release:
 
   # You can change the name of the GitHub release.
   # Default is ``
-  name_template: "datadotworld-go-sdk-v{{.Version}}"
+  name_template: "datadotworld-go-sdk-v{{ .Version }}"
 
 changelog:
   sort: asc

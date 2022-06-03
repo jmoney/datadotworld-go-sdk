@@ -22,7 +22,6 @@ type Tag struct {
 	// value
 	// Max Length: 25
 	// Min Length: 2
-	// Pattern: [a-zA-Z0-9\s]*
 	Value string `json:"value,omitempty"`
 }
 
@@ -50,10 +49,6 @@ func (m *Tag) validateValue(formats strfmt.Registry) error {
 	}
 
 	if err := validate.MaxLength("value", "body", m.Value, 25); err != nil {
-		return err
-	}
-
-	if err := validate.Pattern("value", "body", m.Value, `[a-zA-Z0-9\s]*`); err != nil {
 		return err
 	}
 

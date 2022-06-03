@@ -29,7 +29,6 @@ type ConnectionDto struct {
 	// Example: schemadw
 	// Max Length: 256
 	// Min Length: 0
-	// Pattern: [\w\_]{0,}
 	Database *string `json:"database,omitempty"`
 
 	// Database Host
@@ -41,7 +40,6 @@ type ConnectionDto struct {
 	// Example: Humanitarian_Aid
 	// Max Length: 1024
 	// Min Length: 0
-	// Pattern: [\w\_\.-]{0,}
 	Name *string `json:"name,omitempty"`
 
 	// Database Port
@@ -149,10 +147,6 @@ func (m *ConnectionDto) validateDatabase(formats strfmt.Registry) error {
 		return err
 	}
 
-	if err := validate.Pattern("database", "body", *m.Database, `[\w\_]{0,}`); err != nil {
-		return err
-	}
-
 	return nil
 }
 
@@ -175,10 +169,6 @@ func (m *ConnectionDto) validateName(formats strfmt.Registry) error {
 	}
 
 	if err := validate.MaxLength("name", "body", *m.Name, 1024); err != nil {
-		return err
-	}
-
-	if err := validate.Pattern("name", "body", *m.Name, `[\w\_\.-]{0,}`); err != nil {
 		return err
 	}
 
